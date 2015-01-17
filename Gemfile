@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails',                '4.2.0.beta4'
+gem 'bcrypt',               '3.1.7'
 gem 'sass-rails',           '5.0.0.beta1'
 gem 'bootstrap-sass',       '3.2.0.0'
 gem 'uglifier',             '2.5.3'
@@ -10,6 +11,11 @@ gem 'turbolinks',           '2.3.0'
 gem 'jbuilder',             '2.2.3'
 gem 'rails-html-sanitizer', '1.0.1'
 gem 'sdoc',                 '0.4.0', group: :doc
+gem 'sass', '3.2.19'
+gem 'sprockets', '~> 2.12'
+gem 'sprockets-rails', '3.0.0.beta1'
+gem 'compass-rails', '~> 2.0.0'
+gem 'arel', '6.0.0.beta2'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'

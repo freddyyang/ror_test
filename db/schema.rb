@@ -11,47 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141112021840) do
-
-  create_table "comments", force: true do |t|
-    t.text     "content"
-    t.integer  "authorid"
-    t.integer  "postid"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "microposts", force: true do |t|
-    t.text     "content"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "posts", force: true do |t|
-    t.integer  "userid"
-    t.text     "content"
-    t.string   "title",      limit: 255
-    t.string   "string",     limit: 255
-    t.string   "descrption", limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "products", force: true do |t|
-    t.string   "title",       limit: 255
-    t.text     "description"
-    t.string   "image_url",   limit: 255
-    t.decimal  "price",                   precision: 8, scale: 2
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20150117041606) do
 
   create_table "users", force: true do |t|
-    t.string   "email",      limit: 255
-    t.string   "password",   limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "password_digest"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+
+  create_table "usersses", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
